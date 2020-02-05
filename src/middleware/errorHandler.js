@@ -1,5 +1,5 @@
 module.exports = (err, req, res, next) => {
-  if (err.name === "ValidatorError") {
+  if (err.name === "ValidationError") {
     return res.status(400).json(err.message);
   }
   console.error(err);
